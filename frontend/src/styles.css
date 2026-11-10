@@ -1,0 +1,22 @@
+:root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+body { margin: 0; background: #0f172a; color: #e2e8f0; }
+.container { max-width: 760px; margin: 0 auto; padding: 32px 16px; }
+h1 { margin-bottom: 4px; }
+.sub { color: #94a3b8; }
+.drop { display: block; border: 2px dashed #475569; border-radius: 12px; padding: 32px; text-align: center; cursor: pointer; margin: 20px 0 8px; }
+.drop:hover { border-color: #38bdf8; }
+.drop.disabled { opacity: .6; cursor: wait; }
+.drop input { display: none; }
+.status { color: #38bdf8; min-height: 1.4em; }
+.header-row { display: flex; justify-content: space-between; align-items: center; }
+button { background: #1e293b; color: inherit; border: 1px solid #475569; border-radius: 8px; padding: 6px 14px; cursor: pointer; }
+.list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.card { display: flex; gap: 14px; background: #1e293b; border-radius: 12px; padding: 14px; }
+.card img { width: 96px; height: 96px; object-fit: cover; border-radius: 8px; }
+.body { min-width: 0; flex: 1; }
+.meta { color: #94a3b8; font-size: 13px; margin-top: 4px; }
+.error { color: #f87171; }
+pre { white-space: pre-wrap; background: #0f172a; padding: 8px; border-radius: 6px; font-size: 12px; max-height: 120px; overflow: auto; }
+.badge { margin-left: 8px; font-size: 11px; padding: 2px 8px; border-radius: 99px; background: #334155; }
+.badge.processed { background: #166534; }
+.badge.failed { background: #991b1b; }
