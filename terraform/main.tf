@@ -7,13 +7,7 @@ locals {
   api_zip       = "${path.module}/../backend/build/api.zip"
 }
 
-############################
-# Storage
-############################
-resource "aws_s3_bucket" "uploads" {
-  bucket        = "${local.name}-uploads-${local.account_id}"
-  force_destroy = true
-}
+
 
 resource "aws_s3_bucket" "processed" {
   bucket        = "${local.name}-processed-${local.account_id}"
