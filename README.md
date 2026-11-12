@@ -1,6 +1,9 @@
 # Serverless Event-Driven Image & Document Processing Pipeline
 
-
+Upload an image, PDF or text file from a React UI → it lands in S3 → S3 triggers a Lambda →
+the Lambda processes it (thumbnail / text extraction) → metadata is stored in DynamoDB →
+the UI displays the results. All infrastructure is created with **Terraform** and deployed
+with **GitHub Actions**.
 
 ## Architecture
 
