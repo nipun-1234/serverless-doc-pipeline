@@ -92,3 +92,6 @@ def lambda_handler(event, context):
     if route == "GET /files":
         return list_files(event)
     return _response(404, {"error": "Not found"})
+
+
+Every weekCan we change the class time?
