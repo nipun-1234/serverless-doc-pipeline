@@ -22,10 +22,6 @@ MAX_FILENAME = 100
 URL_TTL = 300
 
 
-def _json_default(o):
-    if isinstance(o, Decimal):
-        return int(o) if o % 1 == 0 else float(o)
-    raise TypeError
 
 
 def _response(status, body):
