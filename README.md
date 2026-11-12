@@ -38,6 +38,12 @@ with **GitHub Actions**.
 | IaC | Terraform |
 | CI/CD | GitHub Actions (OIDC auth to AWS, no stored keys) |
 
+## Security highlights
+
+- Browser uploads directly to S3 using short-lived **presigned URLs** (5 min); files never pass through Lambda.
+- **Least-privilege IAM**: each Lambda can only touch the exact buckets/table it needs.
+- Both buckets block all public access and use server-side encryption; raw uploads expire after 30 days.
+- API validates content type and sanitizes filenames; API throttling enabled.
 
 ## Project structure
 
