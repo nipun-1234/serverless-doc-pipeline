@@ -7,11 +7,7 @@ import pytest
 ROOT = os.path.dirname(os.path.dirname(__file__))
 
 
-def load(name, folder):
-    spec = importlib.util.spec_from_file_location(name, os.path.join(ROOT, folder, "handler.py"))
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
+
 
 
 processor = load("processor_handler", "processor")
