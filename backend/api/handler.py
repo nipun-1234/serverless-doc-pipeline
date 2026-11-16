@@ -81,7 +81,8 @@ def list_files(_event):
                 Params={"Bucket": os.environ["PROCESSED_BUCKET"], "Key": item["thumbnail_key"]},
                 ExpiresIn=URL_TTL,
             )
-    
+    items.sort(key=lambda i: i.get("processed_at", 0), reverse=True)
+    return _response(200, {"files": items})
 
 
 def lambda_handler(event, context):
